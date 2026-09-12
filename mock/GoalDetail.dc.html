@@ -7,215 +7,220 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Shippori+Mincho+B1:wght@600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap">
   <style>
-    body { margin: 0; font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', sans-serif; }
-    a { color: #E3A93F; text-decoration: none; }
-    a:hover { color: #F0C169; }
+    body { margin: 0; font-family: 'M PLUS 1', 'Hiragino Sans', 'Yu Gothic', sans-serif; }
+    a { color: #35E8FF; text-decoration: none; }
+    a:hover { color: #8FF4FF; }
   </style>
 </helmet>
 
-<div style="width: 1440px; height: 900px; background: #14120E; color: #F4EFE4; display: flex; overflow: hidden;">
+<div style="width: 1440px; height: 900px; background: #05090D; color: #E6F4F8; display: flex; flex-direction: column; overflow: hidden; background-image: repeating-linear-gradient(0deg, rgba(53,232,255,0.03) 0 1px, transparent 1px 52px), repeating-linear-gradient(90deg, rgba(53,232,255,0.03) 0 1px, transparent 1px 52px);">
 
-  <aside style="width: 88px; flex-shrink: 0; background: #100E0A; border-right: 1px solid #2B261E; display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 22px 0;">
-    <div style="width: 36px; height: 36px; border: 1.5px solid #E3A93F; display: flex; align-items: center; justify-content: center; color: #E3A93F;">
-      <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 3l6 7-6 7-6-7z"/></svg>
+  <header style="padding: 26px 40px 22px; border-bottom: 1px solid #143848; display: flex; align-items: flex-start; justify-content: space-between; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 11px; min-width: 0;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="padding: 4px 11px; border: 1px solid #1E5566; font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .22em; color: #35E8FF;">SLOT 02</span>
+        <span style="width: 6px; height: 6px; background: #6EE7A8; transform: rotate(45deg);"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .24em; color: #6EE7A8;">ACTIVE</span>
+      </div>
+      <h1 style="margin: 0; font-size: 31px; font-weight: 700; letter-spacing: .2em; text-indent: .2em; text-shadow: 0 0 20px rgba(53,232,255,.2);">英語で技術発表する</h1>
+      <p style="margin: 0; font-size: 13px; color: #4E7180;">社内勉強会で、通訳なしで 20 分話し切れるようになるため</p>
     </div>
-    <nav style="display: flex; flex-direction: column; gap: 4px; width: 100%; align-items: stretch;">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.6"/></svg>
-        <span style="font-size: 10px; letter-spacing: .08em;">今日</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #E3A93F; border-left: 2px solid #E3A93F; background: #1C1811;">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v14"/><path d="M5 4.2h9l-2 3 2 3H5"/></svg>
-        <span style="font-size: 10px; letter-spacing: .08em;">目標</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 15.5l1-4 8-8 3 3-8 8z"/><path d="M12 5.5l3 3"/></svg>
-        <span style="font-size: 10px; letter-spacing: .08em;">記録</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M12.8 7.2l-1.7 3.9-3.9 1.7 1.7-3.9z"/></svg>
-        <span style="font-size: 10px; letter-spacing: .08em;">振返</span>
-      </div>
-    </nav>
-  </aside>
-
-  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
-
-    <header style="padding: 22px 32px 20px; border-bottom: 1px solid #2B261E; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px;">
-      <div style="display: flex; flex-direction: column; gap: 9px; min-width: 0;">
-        <div style="display: flex; align-items: center; gap: 10px;">
-          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #6E6656;">SLOT 2</span>
-          <span style="width: 7px; height: 7px; background: #58C79C; border-radius: 50%;"></span>
-          <span style="font-size: 11px; letter-spacing: .06em; color: #58C79C;">ACTIVE</span>
+    <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
+      <div style="display: flex; align-items: center; gap: 11px; padding: 0 16px; height: 38px; border: 1px solid #143848; background: #071820;">
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .16em; color: #4E7180;">EXTERNAL AI</span>
+        <div style="width: 32px; height: 16px; background: #35E8FF; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px; box-shadow: 0 0 10px rgba(53,232,255,.4);">
+          <span style="width: 12px; height: 12px; background: #05090D;"></span>
         </div>
-        <h1 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 27px; font-weight: 600; letter-spacing: .03em;">英語で技術発表する</h1>
-        <p style="margin: 0; font-size: 13px; color: #A89E8B;">社内勉強会で、通訳なしで 20 分話し切れるようになるため</p>
       </div>
-      <div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0;">
-        <div style="display: flex; align-items: center; gap: 9px; padding: 0 14px; height: 34px; border: 1px solid #332E25;">
-          <span style="font-size: 11px; color: #A89E8B;">外部 AI に送信</span>
-          <div style="width: 30px; height: 17px; background: #58C79C; border-radius: 9px; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px;">
-            <span style="width: 13px; height: 13px; background: #14120E; border-radius: 50%;"></span>
-          </div>
+      <div style="display: flex; align-items: center; justify-content: center; height: 38px; padding: 0 20px; border: 1px solid #1E5566; color: #35E8FF; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .16em; clip-path: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);">EDIT</div>
+    </div>
+  </header>
+
+  <div style="flex-grow: 1; display: flex; gap: 20px; padding: 26px 40px; min-height: 0;">
+
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 22px; min-width: 0;">
+
+      <section style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 5px; height: 5px; background: #35E8FF; transform: rotate(45deg);"></span>
+          <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .26em; color: #4E7180;">PROGRESSION</span>
+          <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+          <span style="font-size: 11px; color: #2F4F5C;">名称と狙いは AI が生成 · 遷移条件はシステムが判定</span>
         </div>
-        <div style="display: flex; align-items: center; justify-content: center; height: 34px; padding: 0 16px; border: 1px solid #4A4335; font-size: 12px; color: #A89E8B;">目標を編集</div>
-      </div>
-    </header>
 
-    <div style="flex-grow: 1; display: flex; gap: 28px; padding: 24px 32px; min-height: 0;">
+        <div style="position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;">
 
-      <section style="width: 880px; flex-shrink: 0; display: flex; flex-direction: column; gap: 22px; min-width: 0;">
-
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-          <div style="display: flex; align-items: baseline; justify-content: space-between;">
-            <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #A89E8B;">フェーズ　<span style="font-family: 'Space Grotesk', sans-serif; color: #6E6656;">2 / 4</span></h2>
-            <span style="font-size: 11px; color: #6E6656;">名称と狙いは AI が生成・遷移条件はアプリが判定</span>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px;">
-
-            <div style="padding: 15px 16px; background: #191713; border: 1px solid #2B261E; border-top: 2px solid #58C79C; display: flex; flex-direction: column; gap: 9px;">
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 13px; height: 13px; background: #6EE7A8; transform: rotate(45deg); flex-shrink: 0;"></span>
+              <span style="flex-grow: 1; height: 1px; background: #1D4433;"></span>
+            </div>
+            <div style="padding: 17px 18px; background: #081720; border: 1px solid #12303D; display: flex; flex-direction: column; gap: 10px; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
               <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #58C79C;">PHASE 1</span>
-                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="#58C79C" stroke-width="1.8"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .22em; color: #46685C;">CHAPTER I</span>
+                <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="#6EE7A8" stroke-width="2"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
               </div>
-              <h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 16px; font-weight: 600; color: #A89E8B;">発音矯正期</h3>
-              <p style="margin: 0; font-size: 12px; color: #6E6656; line-height: 1.65;">自分の発音の癖を把握し、矯正の型を作る</p>
-              <div style="display: flex; align-items: center; gap: 7px; margin-top: 2px;">
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #55503F;">6 / 6</span>
-                <span style="padding: 2px 7px; border: 1px solid #4A4335; font-size: 10px; color: #A89E8B;">編集済み</span>
+              <h3 style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .1em; color: #7E9AA5;">発音矯正期</h3>
+              <p style="margin: 0; font-size: 12px; color: #3E5C68; line-height: 1.7;">自分の発音の癖を把握し、矯正の型を作る</p>
+              <div style="display: flex; align-items: center; gap: 9px; padding-top: 4px;">
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; color: #46685C;">6 / 6</span>
+                <span style="padding: 2px 8px; border: 1px solid #2F4F5C; font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; color: #8FB3C0;">EDITED</span>
               </div>
             </div>
+          </div>
 
-            <div style="padding: 15px 16px; background: #241F16; border: 1px solid #5C4A26; border-top: 2px solid #E3A93F; display: flex; flex-direction: column; gap: 9px;">
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 15px; height: 15px; background: #35E8FF; transform: rotate(45deg); flex-shrink: 0; box-shadow: 0 0 14px rgba(53,232,255,.7);"></span>
+              <span style="flex-grow: 1; height: 1px; background: #143848;"></span>
+            </div>
+            <div style="padding: 17px 18px; background: #0A1F2A; border: 1px solid #1E5566; box-shadow: 0 0 26px rgba(53,232,255,.09); display: flex; flex-direction: column; gap: 10px; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
               <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #E3A93F;">PHASE 2</span>
-                <span style="font-size: 10px; letter-spacing: .1em; color: #E3A93F;">進行中</span>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .22em; color: #35E8FF;">CHAPTER II</span>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .16em; color: #35E8FF;">IN PROGRESS</span>
               </div>
-              <h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 16px; font-weight: 600; color: #F4EFE4;">原稿作成期</h3>
-              <p style="margin: 0; font-size: 12px; color: #A89E8B; line-height: 1.65;">伝えたい内容を英語の構造に落とし込む</p>
-              <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 2px;">
-                <div style="width: 100%; height: 4px; background: #35302A;">
-                  <div style="width: 66%; height: 4px; background: #E3A93F;"></div>
+              <h3 style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .1em; color: #E6F4F8;">原稿作成期</h3>
+              <p style="margin: 0; font-size: 12px; color: #8FB3C0; line-height: 1.7;">伝えたい内容を英語の構造に落とし込む</p>
+              <div style="display: flex; flex-direction: column; gap: 7px; padding-top: 4px;">
+                <div style="width: 100%; height: 5px; background: #0D2430;">
+                  <div style="width: 66%; height: 5px; background: #35E8FF; box-shadow: 0 0 8px rgba(53,232,255,.6);"></div>
                 </div>
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #A89E8B;">4 / 6 クエスト完了で次へ</span>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: #8FB3C0;">4 / 6 CLEARED</span>
               </div>
             </div>
+          </div>
 
-            <div style="padding: 15px 16px; background: #17150F; border: 1px solid #241F19; border-top: 2px solid #241F19; display: flex; flex-direction: column; gap: 9px;">
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 11px; height: 11px; border: 1px solid #1E3D4A; transform: rotate(45deg); flex-shrink: 0;"></span>
+              <span style="flex-grow: 1; height: 1px; background: #0F2730;"></span>
+            </div>
+            <div style="padding: 17px 18px; background: #060F15; border: 1px solid #0F2730; display: flex; flex-direction: column; gap: 10px; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
               <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #4A4335;">PHASE 3</span>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#4A4335" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2"/></svg>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .22em; color: #2F4F5C;">CHAPTER III</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2F4F5C" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2"/></svg>
               </div>
-              <h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 16px; font-weight: 600; color: #55503F;">通し練習期</h3>
-              <p style="margin: 0; font-size: 12px; color: #453F32; line-height: 1.65;">時間内に収め、詰まらずに話し切る</p>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #453F32; margin-top: 2px;">0 / 6</span>
+              <h3 style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .1em; color: #3E5C68;">通し練習期</h3>
+              <p style="margin: 0; font-size: 12px; color: #2A424D; line-height: 1.7;">時間内に収め、詰まらずに話し切る</p>
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; color: #2A424D; padding-top: 4px;">0 / 6</span>
             </div>
+          </div>
 
-            <div style="padding: 15px 16px; background: #17150F; border: 1px solid #241F19; border-top: 2px solid #241F19; display: flex; flex-direction: column; gap: 9px;">
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 11px; height: 11px; border: 1px solid #1E3D4A; transform: rotate(45deg); flex-shrink: 0;"></span>
+              <span style="flex-grow: 1; height: 1px; background: #0F2730;"></span>
+            </div>
+            <div style="padding: 17px 18px; background: #060F15; border: 1px solid #0F2730; display: flex; flex-direction: column; gap: 10px; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
               <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #4A4335;">PHASE 4</span>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#4A4335" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2"/></svg>
+                <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .22em; color: #2F4F5C;">CHAPTER IV</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#2F4F5C" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2"/></svg>
               </div>
-              <h3 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 16px; font-weight: 600; color: #55503F;">本番調整期</h3>
-              <p style="margin: 0; font-size: 12px; color: #453F32; line-height: 1.65;">質疑と機材トラブルに備える</p>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #453F32; margin-top: 2px;">0 / 4</span>
+              <h3 style="margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .1em; color: #3E5C68;">本番調整期</h3>
+              <p style="margin: 0; font-size: 12px; color: #2A424D; line-height: 1.7;">質疑と機材トラブルに備える</p>
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; color: #2A424D; padding-top: 4px;">0 / 4</span>
             </div>
-
-          </div>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 12px; min-height: 0;">
-          <div style="display: flex; align-items: baseline; justify-content: space-between;">
-            <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #A89E8B;">原稿作成期 のクエスト</h2>
-            <span style="font-size: 11px; color: #6E6656;">完了 4　·　進行中 1　·　未達 1</span>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-
-            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: #1D1A15; border: 1px solid #332E25; border-left: 3px solid #E3A93F;">
-              <div style="width: 22px; height: 22px; border: 1.5px solid #4A4335; border-radius: 50%; flex-shrink: 0;"></div>
-              <span style="flex-grow: 1; font-size: 14px;">発表原稿の本編 3 分ぶんを書く</span>
-              <div style="width: 22px; height: 22px; border: 1px solid #4A4335; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700; color: #A89E8B;">M</div>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: #E3A93F; width: 54px; text-align: right;">+25 XP</span>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: #1A1712; border: 1px solid #3A2721; border-left: 3px solid #D9705C;">
-              <div style="width: 22px; height: 22px; border: 1.5px solid #D9705C; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #D9705C;">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg>
-              </div>
-              <span style="flex-grow: 1; font-size: 14px; color: #A89E8B;">導入の言い回しを 3 パターン書き出す</span>
-              <span style="font-size: 11px; color: #D9705C;">9/09 未達</span>
-              <div style="width: 22px; height: 22px; border: 1px solid #3A2721; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700; color: #6E6656;">S</div>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 12px; color: #55503F; width: 54px; text-align: right;">±0 XP</span>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: #191713; border: 1px solid #2B261E;">
-              <div style="width: 22px; height: 22px; background: #58C79C; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #14120E;">
-                <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
-              </div>
-              <span style="flex-grow: 1; font-size: 14px; color: #6E6656; text-decoration: line-through; text-decoration-color: #3A3529;">発表原稿の導入 30 秒を音読して録音する</span>
-              <span style="font-size: 11px; color: #55503F;">9/12 完了</span>
-              <div style="width: 22px; height: 22px; border: 1px solid #2B261E; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700; color: #55503F;">S</div>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: #58C79C; width: 54px; text-align: right;">+10 XP</span>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: #191713; border: 1px solid #2B261E;">
-              <div style="width: 22px; height: 22px; background: #58C79C; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #14120E;">
-                <svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
-              </div>
-              <span style="flex-grow: 1; font-size: 14px; color: #6E6656; text-decoration: line-through; text-decoration-color: #3A3529;">伝えたい主張を日本語で 1 文にまとめる</span>
-              <span style="font-size: 11px; color: #55503F;">9/07 完了</span>
-              <div style="width: 22px; height: 22px; border: 1px solid #2B261E; display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 700; color: #55503F;">S</div>
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: #58C79C; width: 54px; text-align: right;">+10 XP</span>
-            </div>
-
-          </div>
         </div>
       </section>
 
-      <section style="flex-grow: 1; display: flex; flex-direction: column; gap: 12px; min-width: 0;">
-        <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #A89E8B;">記録</h2>
+      <section style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1; min-height: 0;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 5px; height: 5px; background: #35E8FF; transform: rotate(45deg);"></span>
+          <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .26em; color: #4E7180;">QUESTS · CHAPTER II</span>
+          <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+          <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #2F4F5C;">CLEARED 4 · OPEN 1 · FAILED 1</span>
+        </div>
 
-        <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: column; gap: 9px;">
 
-          <div style="display: flex; gap: 14px;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <span style="width: 9px; height: 9px; border: 1.5px solid #E3A93F; border-radius: 50%; margin-top: 5px;"></span>
-              <span style="width: 1px; flex-grow: 1; background: #2B261E;"></span>
-            </div>
-            <div style="padding-bottom: 22px; display: flex; flex-direction: column; gap: 6px;">
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">09.12　08:12</span>
-              <p style="margin: 0; font-size: 13px; line-height: 1.75; color: #D8D0C0;">録音を聞き返したら th の音が全部 s になっていた。発音矯正期でやった型が本編では抜けている。</p>
-            </div>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 15px 20px; background: #0A1F2A; border: 1px solid #1E5566; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
+            <span style="width: 22px; height: 22px; border: 1px solid #35E8FF; transform: rotate(45deg); flex-shrink: 0;"></span>
+            <span style="flex-grow: 1; font-size: 14px; font-weight: 500; letter-spacing: .04em;">発表原稿の本編 3 分ぶんを書く</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: #4E7180;">M</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #35E8FF; width: 74px; text-align: right;">+25 EXP</span>
           </div>
 
-          <div style="display: flex; gap: 14px;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <span style="width: 9px; height: 9px; border: 1.5px solid #4A4335; border-radius: 50%; margin-top: 5px;"></span>
-              <span style="width: 1px; flex-grow: 1; background: #2B261E;"></span>
-            </div>
-            <div style="padding-bottom: 22px; display: flex; flex-direction: column; gap: 6px;">
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">09.09　23:40</span>
-              <p style="margin: 0; font-size: 13px; line-height: 1.75; color: #A89E8B;">時間が取れず未達。夜にまとめてやろうとすると落ちる傾向。</p>
-            </div>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 15px 20px; background: #1A0F13; border: 1px solid #5A2C31; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
+            <span style="width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #FF7A6B;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+            </span>
+            <span style="flex-grow: 1; font-size: 14px; font-weight: 500; letter-spacing: .04em; color: #C3A9A6;">導入の言い回しを 3 パターン書き出す</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #FF7A6B;">FAILED 09/09</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: #6B4A47;">S</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #6B4A47; width: 74px; text-align: right;">±0 EXP</span>
           </div>
 
-          <div style="display: flex; gap: 14px;">
-            <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
-              <span style="width: 9px; height: 9px; border: 1.5px solid #4A4335; border-radius: 50%; margin-top: 5px;"></span>
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">09.07　21:05</span>
-              <p style="margin: 0; font-size: 13px; line-height: 1.75; color: #A89E8B;">主張は「小さく作って早く壊す」。ここが決まると原稿が一気に進んだ。</p>
-            </div>
+          <div style="display: flex; align-items: center; gap: 16px; padding: 15px 20px; background: #08170F; border: 1px solid #1D4433; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
+            <span style="width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #6EE7A8;">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
+            </span>
+            <span style="flex-grow: 1; font-size: 14px; font-weight: 500; letter-spacing: .04em; color: #46685C; text-decoration: line-through; text-decoration-color: #2A4A3B;">発表原稿の導入 30 秒を音読して録音する</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #3E6B57;">09/12</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: #3E6B57;">S</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #6EE7A8; width: 74px; text-align: right;">+10 EXP</span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 16px; padding: 15px 20px; background: #08170F; border: 1px solid #1D4433; clip-path: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);">
+            <span style="width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #6EE7A8;">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
+            </span>
+            <span style="flex-grow: 1; font-size: 14px; font-weight: 500; letter-spacing: .04em; color: #46685C; text-decoration: line-through; text-decoration-color: #2A4A3B;">伝えたい主張を日本語で 1 文にまとめる</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #3E6B57;">09/07</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: #3E6B57;">S</span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: #6EE7A8; width: 74px; text-align: right;">+10 EXP</span>
           </div>
 
         </div>
       </section>
     </div>
+
+    <aside style="width: 300px; flex-shrink: 0; padding: 20px 22px; background: #071820; border: 1px solid #143848; display: flex; flex-direction: column; gap: 16px; min-height: 0; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="width: 5px; height: 5px; background: #35E8FF; transform: rotate(45deg);"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .24em; color: #4E7180;">RECORDS</span>
+        <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+
+        <div style="display: flex; gap: 14px;">
+          <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+            <span style="width: 9px; height: 9px; background: #35E8FF; transform: rotate(45deg); margin-top: 5px;"></span>
+            <span style="width: 1px; flex-grow: 1; background: #12303D;"></span>
+          </div>
+          <div style="padding-bottom: 22px; display: flex; flex-direction: column; gap: 7px;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #2F4F5C;">09.12　08:12</span>
+            <p style="margin: 0; font-size: 12px; line-height: 1.85; color: #C3DCE5;">録音を聞き返したら th の音が全部 s になっていた。発音矯正期でやった型が本編では抜けている。</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 14px;">
+          <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+            <span style="width: 9px; height: 9px; border: 1px solid #1E3D4A; transform: rotate(45deg); margin-top: 5px;"></span>
+            <span style="width: 1px; flex-grow: 1; background: #12303D;"></span>
+          </div>
+          <div style="padding-bottom: 22px; display: flex; flex-direction: column; gap: 7px;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #2F4F5C;">09.09　23:40</span>
+            <p style="margin: 0; font-size: 12px; line-height: 1.85; color: #8FB3C0;">時間が取れず未達。夜にまとめてやろうとすると落ちる傾向。</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 14px;">
+          <div style="display: flex; flex-direction: column; align-items: center; flex-shrink: 0;">
+            <span style="width: 9px; height: 9px; border: 1px solid #1E3D4A; transform: rotate(45deg); margin-top: 5px;"></span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #2F4F5C;">09.07　21:05</span>
+            <p style="margin: 0; font-size: 12px; line-height: 1.85; color: #8FB3C0;">主張は「小さく作って早く壊す」。ここが決まると原稿が一気に進んだ。</p>
+          </div>
+        </div>
+
+      </div>
+    </aside>
   </div>
 </div>
 </x-dc>
