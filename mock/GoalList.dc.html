@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Grotesk:wght@500;700&family=Shippori+Mincho+B1:wght@600&display=swap">
+  <style>
+    body { margin: 0; font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', sans-serif; }
+    a { color: #E3A93F; text-decoration: none; }
+    a:hover { color: #F0C169; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 900px; background: #14120E; color: #F4EFE4; display: flex; overflow: hidden;">
+
+  <aside style="width: 88px; flex-shrink: 0; background: #100E0A; border-right: 1px solid #2B261E; display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 22px 0;">
+    <div style="width: 36px; height: 36px; border: 1.5px solid #E3A93F; display: flex; align-items: center; justify-content: center; color: #E3A93F;">
+      <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 3l6 7-6 7-6-7z"/></svg>
+    </div>
+    <nav style="display: flex; flex-direction: column; gap: 4px; width: 100%; align-items: stretch;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><circle cx="10" cy="10" r="2.6"/></svg>
+        <span style="font-size: 10px; letter-spacing: .08em;">今日</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #E3A93F; border-left: 2px solid #E3A93F; background: #1C1811;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v14"/><path d="M5 4.2h9l-2 3 2 3H5"/></svg>
+        <span style="font-size: 10px; letter-spacing: .08em;">目標</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 15.5l1-4 8-8 3 3-8 8z"/><path d="M12 5.5l3 3"/></svg>
+        <span style="font-size: 10px; letter-spacing: .08em;">記録</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 11px 0; color: #6E6656; border-left: 2px solid transparent;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M12.8 7.2l-1.7 3.9-3.9 1.7 1.7-3.9z"/></svg>
+        <span style="font-size: 10px; letter-spacing: .08em;">振返</span>
+      </div>
+    </nav>
+  </aside>
+
+  <div style="flex-grow: 1; display: flex; flex-direction: column; min-width: 0;">
+
+    <header style="display: flex; align-items: flex-end; justify-content: space-between; padding: 24px 32px 20px; border-bottom: 1px solid #2B261E;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: .18em; color: #6E6656;">GOALS</span>
+        <h1 style="margin: 0; font-family: 'Shippori Mincho B1', serif; font-size: 26px; font-weight: 600; letter-spacing: .04em;">目標</h1>
+      </div>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span style="font-size: 11px; color: #6E6656;">アクティブ枠が満杯のため、新しい目標は控えに入ります</span>
+        <div style="display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 18px; border: 1px solid #4A4335; color: #A89E8B;">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4.5v11M4.5 10h11"/></svg>
+          <span style="font-size: 12px; font-weight: 700;">新しい目標</span>
+        </div>
+      </div>
+    </header>
+
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 28px; padding: 26px 32px; min-height: 0;">
+
+      <section style="display: flex; flex-direction: column; gap: 13px;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #F4EFE4;">アクティブ</h2>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #E3A93F;">3 / 3 SLOTS</span>
+          <span style="font-size: 11px; color: #6E6656;">同時に進めるのは 3 件まで</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+
+          <div style="padding: 20px 22px; background: #1D1A15; border: 1px solid #332E25; border-top: 2px solid #E3A93F; display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #6E6656;">SLOT 1</span>
+              <div style="width: 26px; height: 15px; background: #58C79C; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #14120E; border-radius: 50%;"></span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <h3 style="margin: 0; font-size: 17px; font-weight: 700;">Tasquest を公開する</h3>
+              <p style="margin: 0; font-size: 12px; color: #A89E8B; line-height: 1.65;">記録が続く形を自分で確かめたいため</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                <span style="font-family: 'Shippori Mincho B1', serif; font-size: 13px; color: #E3A93F;">設計固め期</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">PHASE 2 / 4</span>
+              </div>
+              <div style="display: flex; gap: 5px;">
+                <div style="flex-grow: 1; height: 3px; background: #E3A93F;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #E3A93F;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; padding-top: 12px; border-top: 1px solid #2B261E;">
+              <span style="font-size: 11px; color: #A89E8B;">クエスト <span style="font-family: 'Space Grotesk', sans-serif; color: #F4EFE4;">3 / 6</span></span>
+              <span style="font-size: 11px; color: #A89E8B;">記録 <span style="font-family: 'Space Grotesk', sans-serif; color: #F4EFE4;">18</span> 件</span>
+            </div>
+          </div>
+
+          <div style="padding: 20px 22px; background: #1D1A15; border: 1px solid #332E25; border-top: 2px solid #58C79C; display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #6E6656;">SLOT 2</span>
+              <div style="width: 26px; height: 15px; background: #58C79C; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #14120E; border-radius: 50%;"></span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <h3 style="margin: 0; font-size: 17px; font-weight: 700;">英語で技術発表する</h3>
+              <p style="margin: 0; font-size: 12px; color: #A89E8B; line-height: 1.65;">社内勉強会で、通訳なしで 20 分話し切れるようになるため</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                <span style="font-family: 'Shippori Mincho B1', serif; font-size: 13px; color: #58C79C;">原稿作成期</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">PHASE 2 / 4</span>
+              </div>
+              <div style="display: flex; gap: 5px;">
+                <div style="flex-grow: 1; height: 3px; background: #58C79C;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #58C79C;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 14px; padding-top: 12px; border-top: 1px solid #2B261E;">
+              <span style="font-size: 11px; color: #A89E8B;">クエスト <span style="font-family: 'Space Grotesk', sans-serif; color: #F4EFE4;">4 / 6</span></span>
+              <span style="font-size: 11px; color: #A89E8B;">記録 <span style="font-family: 'Space Grotesk', sans-serif; color: #F4EFE4;">31</span> 件</span>
+            </div>
+          </div>
+
+          <div style="padding: 20px 22px; background: #1D1A15; border: 1px solid #3A2721; border-top: 2px solid #D9705C; display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; color: #6E6656;">SLOT 3</span>
+              <div style="width: 26px; height: 15px; background: #3A3529; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #6E6656; border-radius: 50%;"></span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <h3 style="margin: 0; font-size: 17px; font-weight: 700;">週 3 回走る</h3>
+              <p style="margin: 0; font-size: 12px; color: #A89E8B; line-height: 1.65;">夕方に体力が切れて手が止まるのをやめたいため</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                <span style="font-family: 'Shippori Mincho B1', serif; font-size: 13px; color: #7BA8E0;">習慣定着期</span>
+                <span style="font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: #6E6656;">PHASE 1 / 4</span>
+              </div>
+              <div style="display: flex; gap: 5px;">
+                <div style="flex-grow: 1; height: 3px; background: #7BA8E0;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+                <div style="flex-grow: 1; height: 3px; background: #332E25;"></div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid #3A2721;">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#D9705C" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="M10 6.4v4.2M10 13.4v.2"/></svg>
+              <span style="font-size: 11px; color: #D9705C;">3 回連続未達　·　振り返り 1 件</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 13px;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #A89E8B;">控え</h2>
+          <span style="font-size: 11px; color: #6E6656;">スロットが空くまで待機。クエストは生成されません</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+          <div style="padding: 16px 20px; background: #17150F; border: 1px dashed #3A3529; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+            <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0;">
+              <h3 style="margin: 0; font-size: 14px; font-weight: 700; color: #A89E8B;">簿記 2 級を取る</h3>
+              <p style="margin: 0; font-size: 11px; color: #55503F;">11 月の試験に申し込むところから</p>
+            </div>
+            <span style="font-size: 11px; color: #6E6656; flex-shrink: 0;">昇格</span>
+          </div>
+          <div style="padding: 16px 20px; background: #17150F; border: 1px dashed #3A3529; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+            <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0;">
+              <h3 style="margin: 0; font-size: 14px; font-weight: 700; color: #A89E8B;">Rust で CLI を 1 本書く</h3>
+              <p style="margin: 0; font-size: 11px; color: #55503F;">所有権の理解を手を動かして確かめる</p>
+            </div>
+            <span style="font-size: 11px; color: #6E6656; flex-shrink: 0;">昇格</span>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <section style="display: flex; flex-direction: column; gap: 13px;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .1em; color: #A89E8B;">完了</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;">
+          <div style="padding: 16px 20px; background: #17150F; border: 1px solid #241F19; display: flex; align-items: center; gap: 12px;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#58C79C" stroke-width="1.8"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
+            <div style="display: flex; flex-direction: column; gap: 4px; flex-grow: 1; min-width: 0;">
+              <h3 style="margin: 0; font-size: 14px; font-weight: 700; color: #6E6656;">個人サイトを作り直す</h3>
+              <p style="margin: 0; font-size: 11px; color: #453F32;">2026.07.28 達成　·　獲得 420 XP</p>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
