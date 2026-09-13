@@ -1,0 +1,11 @@
+{
+  "name": "tasquest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:schema": "node --test supabase/tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8"
+  }
+}
