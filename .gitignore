@@ -1,0 +1,21 @@
+# 依存
+node_modules/
+
+# ビルド成果物
+.next/
+out/
+dist/
+build/
+
+# 環境変数（実値は決してコミットしない）
+.env
+.env.local
+.env.*.local
+
+# Supabase CLI
+.branches/
+.temp/
+
+# OS / エディタ
+.DS_Store
+*.log
