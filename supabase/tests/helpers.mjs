@@ -6,12 +6,20 @@
 //   作成し、SET ROLE してから検証する。
 
 import { PGlite } from '@electric-sql/pglite';
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-const MIGRATION = fileURLToPath(
-  new URL('../migrations/0001_init.sql', import.meta.url),
-);
+const MIGRATIONS_DIR = fileURLToPath(new URL('../migrations/', import.meta.url));
+
+/** migrations/ 配下の .sql をファイル名順に読み込む。 */
+async function migrations() {
+  const names = (await readdir(MIGRATIONS_DIR))
+    .filter((n) => n.endsWith('.sql'))
+    .sort();
+  return Promise.all(
+    names.map(async (n) => [n, await readFile(MIGRATIONS_DIR + n, 'utf8')]),
+  );
+}
 
 export const USER_A = '11111111-1111-4111-8111-111111111111';
 export const USER_B = '22222222-2222-4222-8222-222222222222';
@@ -43,7 +51,13 @@ const BOOTSTRAP = `
 export async function freshDb() {
   const db = new PGlite();
   await db.exec(BOOTSTRAP);
-  await db.exec(await readFile(MIGRATION, 'utf8'));
+  for (const [name, sql] of await migrations()) {
+    try {
+      await db.exec(sql);
+    } catch (error) {
+      throw new Error(`マイグレーション ${name} の適用に失敗: ${error.message}`);
+    }
+  }
 
   // 利用者 2 名を用意する。player 行はトリガーが作る。
   await db.exec(`

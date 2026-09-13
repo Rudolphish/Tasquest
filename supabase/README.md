@@ -7,8 +7,11 @@ Tasquest のデータベース定義と、その検証。
 | パス | 内容 |
 |---|---|
 | `migrations/0001_init.sql` | 初期スキーマ。テーブル、RLS、制約、RPC のシグネチャ |
+| `migrations/0002_quests_xp_value_not_null.sql` | `quests.xp_value` に NOT NULL を付与する |
 | `tests/schema.test.mjs` | スキーマの検証。制約が違反を拒否することを確認する |
+| `tests/types.test.mjs` | 型定義がマイグレーションと一致していることの検証 |
 | `tests/helpers.mjs` | PGlite 上に Supabase 相当の最小環境を用意する補助 |
+| `tools/gen-types.mjs` | マイグレーションから TypeScript の型定義を生成する |
 
 ## 検証の実行
 
@@ -26,9 +29,26 @@ Supabase 固有の `auth.users` と `auth.uid()`、および `anon` / `authentic
 なお PostgreSQL のスーパーユーザーは RLS を迂回する。
 そのため検証では `authenticated` ロールへ `set role` してから確認している。
 
+## 型定義の生成
+
+```bash
+npm run gen:types
+```
+
+`src/lib/database.types.ts` を生成する。
+
+`supabase gen types` は CLI へのログインかデータベースパスワードを要求するため採用していない。
+代わりに PGlite 上へマイグレーションを適用し、その内省結果から生成する。
+認証情報を持たない環境でも再生成でき、スキーマとの乖離を検査で検出できる。
+出力形式は `supabase gen types` と互換であり、必要になれば差し替えられる。
+
+生成列は `Insert` と `Update` から除外される。
+これにより `xp_value` への代入は型検査の段階で落ちる。
+この保証は `src/lib/db/type-guarantees.ts` が `@ts-expect-error` で固定している。
+
 ## 本番への適用
 
-Supabase ダッシュボードの SQL Editor に `migrations/0001_init.sql` の内容を貼り付けて実行する。
+Supabase ダッシュボードの SQL Editor に `migrations/` 配下の SQL をファイル名順に貼り付けて実行する。
 API キーもデータベースパスワードも不要であり、失敗時のエラーがその場で確認できる。
 
 適用後、次を確認する。
