@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap">
+  <style>
+    body { margin: 0; font-family: 'M PLUS 1', 'Hiragino Sans', 'Yu Gothic', sans-serif; }
+    a { color: #35E8FF; text-decoration: none; }
+    a:hover { color: #8FF4FF; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 900px; background: #05090D; color: #E6F4F8; display: flex; flex-direction: column; overflow: hidden; background-image: repeating-linear-gradient(0deg, rgba(53,232,255,0.03) 0 1px, transparent 1px 52px), repeating-linear-gradient(90deg, rgba(53,232,255,0.03) 0 1px, transparent 1px 52px);">
+
+  <header style="padding: 26px 40px 22px; border-bottom: 1px solid #143848; display: flex; align-items: flex-end; justify-content: space-between;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 11px;">
+        <span style="width: 22px; height: 1px; background: #1E7A90;"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .34em; color: #1E7A90;">QUEST REGISTRY</span>
+      </div>
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: .26em; text-indent: .26em; text-shadow: 0 0 20px rgba(53,232,255,.2);">目標</h1>
+    </div>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span style="font-size: 11px; color: #2F4F5C;">枠が満杯のため、新しい目標は控えに入ります</span>
+      <div style="display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 20px; border: 1px solid #1E5566; color: #35E8FF; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4.5v11M4.5 10h11"/></svg>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .18em;">NEW QUEST</span>
+      </div>
+    </div>
+  </header>
+
+  <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 26px; padding: 26px 40px; min-height: 0;">
+
+    <section style="display: flex; flex-direction: column; gap: 15px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="width: 5px; height: 5px; background: #35E8FF; transform: rotate(45deg);"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .26em; color: #8FB3C0;">ACTIVE SLOTS</span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; color: #35E8FF;">3 / 3</span>
+        <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+        <span style="font-size: 11px; color: #2F4F5C;">同時に進めるのは 3 件まで</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+
+        <div style="padding: 22px 24px; background: #0A1F2A; border: 1px solid #1E5566; box-shadow: 0 0 26px rgba(53,232,255,.07); display: flex; flex-direction: column; gap: 16px; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .24em; color: #1E7A90;">SLOT 01</span>
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; color: #4E7180;">AI</span>
+              <div style="width: 30px; height: 15px; background: #35E8FF; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #05090D;"></span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .08em;">Tasquest を公開する</h3>
+            <p style="margin: 0; font-size: 12px; color: #8FB3C0; line-height: 1.7;">記録が続く形を自分で確かめたいため</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #35E8FF;">設計固め期</span>
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; color: #1E7A90;">CH. II / IV</span>
+            </div>
+            <div style="display: flex; gap: 4px;">
+              <div style="flex-grow: 1; height: 3px; background: #35E8FF;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #35E8FF;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #12303D;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #12303D;"></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 18px; padding-top: 14px; border-top: 1px solid #143848;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #4E7180;">QUESTS <span style="color: #E6F4F8; font-size: 14px;">3/6</span></span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #4E7180;">LOGS <span style="color: #E6F4F8; font-size: 14px;">18</span></span>
+          </div>
+        </div>
+
+        <div style="padding: 22px 24px; background: #081D20; border: 1px solid #1D4433; display: flex; flex-direction: column; gap: 16px; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .24em; color: #3E6B57;">SLOT 02</span>
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; color: #4E7180;">AI</span>
+              <div style="width: 30px; height: 15px; background: #6EE7A8; display: flex; align-items: center; justify-content: flex-end; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #05090D;"></span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .08em;">英語で技術発表する</h3>
+            <p style="margin: 0; font-size: 12px; color: #8FB3C0; line-height: 1.7;">社内勉強会で、通訳なしで 20 分話し切れるようになるため</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #6EE7A8;">原稿作成期</span>
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; color: #3E6B57;">CH. II / IV</span>
+            </div>
+            <div style="display: flex; gap: 4px;">
+              <div style="flex-grow: 1; height: 3px; background: #6EE7A8;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #6EE7A8;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #12303D;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #12303D;"></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 18px; padding-top: 14px; border-top: 1px solid #12303D;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #4E7180;">QUESTS <span style="color: #E6F4F8; font-size: 14px;">4/6</span></span>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; color: #4E7180;">LOGS <span style="color: #E6F4F8; font-size: 14px;">31</span></span>
+          </div>
+        </div>
+
+        <div style="padding: 22px 24px; background: #1A0F13; border: 1px solid #5A2C31; display: flex; flex-direction: column; gap: 16px; clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .24em; color: #8E5A52;">SLOT 03</span>
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .12em; color: #6B4A47;">AI</span>
+              <div style="width: 30px; height: 15px; background: #2B1A1C; display: flex; align-items: center; justify-content: flex-start; padding: 0 2px;">
+                <span style="width: 11px; height: 11px; background: #6B4A47;"></span>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <h3 style="margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .08em;">週 3 回走る</h3>
+            <p style="margin: 0; font-size: 12px; color: #C3A9A6; line-height: 1.7;">夕方に体力が切れて手が止まるのをやめたいため</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <span style="font-size: 13px; font-weight: 700; letter-spacing: .12em; color: #FF7A6B;">習慣定着期</span>
+              <span style="font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .16em; color: #8E5A52;">CH. I / IV</span>
+            </div>
+            <div style="display: flex; gap: 4px;">
+              <div style="flex-grow: 1; height: 3px; background: #FF7A6B;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #2B1A1C;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #2B1A1C;"></div>
+              <div style="flex-grow: 1; height: 3px; background: #2B1A1C;"></div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 11px; padding-top: 14px; border-top: 1px solid #3A2226;">
+            <svg width="15" height="15" viewBox="0 0 20 20" fill="none" stroke="#FF7A6B" stroke-width="1.5"><path d="M10 2.5l7.5 14h-15z"/><path d="M10 8v3.4M10 13.6v.2"/></svg>
+            <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .12em; color: #FF7A6B;">3 FAILS · COUNCIL 1</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 15px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="width: 5px; height: 5px; border: 1px solid #1E5566; transform: rotate(45deg);"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .26em; color: #4E7180;">RESERVE</span>
+        <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+        <span style="font-size: 11px; color: #2F4F5C;">枠が空くまで待機。クエストは生成されません</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+        <div style="padding: 17px 20px; background: #060F15; border: 1px dashed #1E3D4A; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+            <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .06em; color: #8FB3C0;">簿記 2 級を取る</h3>
+            <p style="margin: 0; font-size: 11px; color: #2F4F5C;">11 月の試験に申し込むところから</p>
+          </div>
+          <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .14em; color: #1E7A90; flex-shrink: 0;">DEPLOY</span>
+        </div>
+        <div style="padding: 17px 20px; background: #060F15; border: 1px dashed #1E3D4A; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+          <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0;">
+            <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .06em; color: #8FB3C0;">Rust で CLI を 1 本書く</h3>
+            <p style="margin: 0; font-size: 11px; color: #2F4F5C;">所有権の理解を手を動かして確かめる</p>
+          </div>
+          <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .14em; color: #1E7A90; flex-shrink: 0;">DEPLOY</span>
+        </div>
+        <div></div>
+      </div>
+    </section>
+
+    <section style="display: flex; flex-direction: column; gap: 15px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="width: 5px; height: 5px; background: #1D4433; transform: rotate(45deg);"></span>
+        <span style="font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .26em; color: #4E7180;">COMPLETED</span>
+        <span style="flex-grow: 1; height: 1px; background: #12303D;"></span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+        <div style="padding: 17px 20px; background: #08170F; border: 1px solid #14301F; display: flex; align-items: center; gap: 14px;">
+          <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="#3E6B57" stroke-width="2"><path d="M4.5 10.5l4 4 7.5-8.5"/></svg>
+          <div style="display: flex; flex-direction: column; gap: 5px; flex-grow: 1; min-width: 0;">
+            <h3 style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .06em; color: #46685C;">個人サイトを作り直す</h3>
+            <p style="margin: 0; font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .12em; color: #2A4A3B;">2026.07.28 CLEARED · 420 EXP</p>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
