@@ -3,9 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test:schema": "node --test supabase/tests/*.test.mjs"
+    "gen:types": "node supabase/tools/gen-types.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:schema": "node --test supabase/tests/*.test.mjs",
+    "test": "npm run typecheck && npm run test:schema"
   },
   "devDependencies": {
-    "@electric-sql/pglite": "^0.5.8"
+    "@electric-sql/pglite": "^0.5.8",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.116.0"
   }
 }
