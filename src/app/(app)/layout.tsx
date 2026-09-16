@@ -1,4 +1,5 @@
 import { requireUser } from '@/lib/auth';
+import { ClearHash } from '@/components/clear-hash';
 
 /**
  * ログインを要求するレイアウト。
@@ -9,5 +10,11 @@ import { requireUser } from '@/lib/auth';
  */
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   await requireUser();
-  return children;
+
+  return (
+    <div className="shell">
+      <ClearHash />
+      {children}
+    </div>
+  );
 }
