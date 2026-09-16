@@ -19,3 +19,10 @@ build/
 # OS / エディタ
 .DS_Store
 *.log
+
+# Next.js
+next-env.d.ts
+.vercel
+
+# TypeScript の増分ビルド情報
+*.tsbuildinfo
