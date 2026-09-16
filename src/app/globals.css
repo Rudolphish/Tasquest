@@ -1,0 +1,91 @@
+/*
+ * 画面の視覚語彙。docs/design.md 6.4 節に対応する。
+ * S3 では最小限の適用にとどめ、全画面への展開は S6 で行う。
+ */
+
+:root {
+  --bg: #05090d;
+  --panel: #071820;
+  --panel-active: #0a1f2a;
+  --line: #143848;
+  --line-strong: #1e5566;
+  --cyan: #35e8ff;
+  --cyan-dim: #1e7a90;
+  --text: #e6f4f8;
+  --text-2: #8fb3c0;
+  --text-3: #4e7180;
+  --green: #6ee7a8;
+  --red: #ff7a6b;
+  --violet: #b98cff;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(53, 232, 255, 0.03) 0 1px, transparent 1px 52px),
+    repeating-linear-gradient(90deg, rgba(53, 232, 255, 0.03) 0 1px, transparent 1px 52px);
+  color: var(--text);
+  font-family: var(--font-body), 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8ff4ff;
+}
+
+/* 欧文のラベル。広い字間で見出しの上に置く。 */
+.eyebrow {
+  font-family: var(--font-display), sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--cyan-dim);
+}
+
+/* 角を落としたパネル。 */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  clip-path: polygon(
+    14px 0,
+    100% 0,
+    100% calc(100% - 14px),
+    calc(100% - 14px) 100%,
+    0 100%,
+    0 14px
+  );
+}
+
+.numeric {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
