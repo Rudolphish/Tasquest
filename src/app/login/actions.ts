@@ -27,7 +27,7 @@ export async function sendMagicLink(
   const { error } = await db.auth.signInWithOtp({
     email,
     options: {
-      emailRedirectTo: `${origin}/auth/confirm`,
+      emailRedirectTo: `${origin}/auth/callback`,
       // 招待していない相手が勝手に登録できないようにする。単独利用のため、
       // 最初の 1 人はダッシュボードから手で作る。
       shouldCreateUser: false,
