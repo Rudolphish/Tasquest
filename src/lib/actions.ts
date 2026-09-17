@@ -1,5 +1,7 @@
 import { ActiveSlotsFullError } from '@/lib/db';
 
+export { todayIso } from '@/lib/clock';
+
 /** フォームに結果を返すための共通の形。 */
 export type ActionState = { status: 'idle' | 'ok'; message?: undefined } | { status: 'error'; message: string };
 
@@ -28,9 +30,4 @@ export function requiredText(formData: FormData, key: string, label: string): st
 export function optionalText(formData: FormData, key: string): string | null {
   const value = String(formData.get(key) ?? '').trim();
   return value === '' ? null : value;
-}
-
-/** その日の日付を、データベースの date 列と同じ形にする。 */
-export function todayIso(): string {
-  return new Date().toLocaleDateString('sv-SE');
 }

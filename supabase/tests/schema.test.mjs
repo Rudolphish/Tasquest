@@ -311,12 +311,13 @@ test('失敗した AI 実行は理由を必須とし、再試行を妨げない�
   await db.close();
 });
 
-test('AI 向け RPC は未実装であることを明示して失敗する（D-10）', async () => {
+test('未実装の RPC は、その旨を明示して失敗する（D-10）', async () => {
   const db = await freshDb();
   await actAs(db, USER_A);
 
+  // propose_quests は 0003 で実装済みのため、ここでは対象としない。
+  // 実装後の挙動は supabase/tests/rpc.test.mjs で確認している。
   for (const [sql, params] of [
-    [`select * from public.propose_quests('{}'::jsonb)`, []],
     [`select * from public.propose_phases($1, '[]'::jsonb)`, [USER_A]],
     [`select * from public.record_insight($1, '結論')`, [USER_A]],
   ]) {

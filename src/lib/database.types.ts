@@ -423,6 +423,10 @@ export type Database = {
       };
     };
     Functions: {
+      app_today: {
+        Args: Record<string, unknown>;
+        Returns: unknown;
+      };
       level_for_xp: {
         Args: Record<string, unknown>;
         Returns: unknown;

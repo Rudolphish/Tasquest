@@ -101,7 +101,7 @@ export async function generate() {
     join pg_namespace n on n.oid = p.pronamespace
     where n.nspname = 'public'
       and p.proname in ('propose_quests', 'propose_phases', 'record_insight',
-                        'xp_for_level', 'level_for_xp')
+                        'xp_for_level', 'level_for_xp', 'app_today')
     order by p.proname
   `);
 
