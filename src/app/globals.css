@@ -89,3 +89,218 @@ input {
 button {
   cursor: pointer;
 }
+
+/* --------------------------------------------------------------------------
+ * 画面の骨格
+ * ----------------------------------------------------------------------- */
+
+.shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.shell-main {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 26px 20px 96px;
+}
+
+.command-bar {
+  position: fixed;
+  inset: auto 0 0 0;
+  display: flex;
+  gap: 1px;
+  background: var(--line);
+  border-top: 1px solid var(--line);
+  z-index: 10;
+}
+
+.command-bar a {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+  background: #07131b;
+  color: var(--text-3);
+  font-size: 12px;
+}
+
+.command-bar a[data-active='true'] {
+  background: var(--panel-active);
+  color: var(--cyan);
+}
+
+/* --------------------------------------------------------------------------
+ * 盤面
+ * ----------------------------------------------------------------------- */
+
+.board {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 304px minmax(0, 1fr);
+  align-items: start;
+}
+
+@media (max-width: 920px) {
+  .board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rule::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--cyan);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.rule::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background: #12303d;
+}
+
+.meter {
+  width: 100%;
+  height: 8px;
+  background: #0d2430;
+  border: 1px solid var(--line);
+  padding: 1px;
+  display: flex;
+}
+
+.meter > span {
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(53, 232, 255, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+ * 部品
+ * ----------------------------------------------------------------------- */
+
+.cut {
+  clip-path: polygon(
+    12px 0,
+    100% 0,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    0 100%,
+    0 12px
+  );
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--cyan);
+  font-family: var(--font-display), sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--panel-active);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  border-color: var(--cyan);
+  background: var(--cyan);
+  color: #05090d;
+  box-shadow: 0 0 20px rgba(53, 232, 255, 0.28);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #8ff4ff;
+}
+
+.btn-quiet {
+  border-color: var(--line);
+  color: var(--text-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field > span {
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 14px;
+  background: #040c11;
+  border: 1px solid var(--line);
+  color: var(--text);
+  outline-color: var(--cyan);
+}
+
+.field textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.9;
+}
+
+.error {
+  margin: 0;
+  font-size: 12px;
+  color: var(--red);
+  line-height: 1.8;
+}
+
+.empty {
+  padding: 26px 22px;
+  border: 1px dashed var(--line-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty > strong {
+  font-size: 14px;
+}
+
+.empty > p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-3);
+  line-height: 1.9;
+}

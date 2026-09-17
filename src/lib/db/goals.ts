@@ -153,3 +153,22 @@ export async function setShareWithExternalAi(
   if (error) throwMapped(error);
   return data;
 }
+
+/**
+ * 指定した ID の目標をまとめて取得する。
+ *
+ * クエストに目標名を添えて表示する用途に使う。PostgREST の入れ子取得は
+ * 複合外部キーの解決に不確実さがあるため、2 回に分けて取得し呼び出し側で
+ * 突き合わせる。1 日あたりのクエストは 3 件であり、負荷は問題にならない。
+ */
+export async function listGoalsByIds(db: Db, ids: readonly string[]): Promise<Goal[]> {
+  if (ids.length === 0) return [];
+
+  const { data, error } = await db
+    .from('goals')
+    .select(GOAL_COLUMNS)
+    .in('id', [...ids]);
+
+  if (error) throwMapped(error);
+  return data ?? [];
+}

@@ -105,3 +105,9 @@ export async function reopenQuest(db: Db, questId: string): Promise<Quest> {
   if (error) throwMapped(error);
   return data;
 }
+
+/** クエストを取り消す。手で作ったものを消したいときに使う。 */
+export async function deleteQuest(db: Db, questId: string): Promise<void> {
+  const { error } = await db.from('quests').delete().eq('id', questId);
+  if (error) throwMapped(error);
+}
