@@ -6,6 +6,7 @@ import { CommandBar } from '@/components/nav';
 import { CheckIcon, Empty, SectionRule } from '@/components/ui';
 import { deleteQuestAction } from './actions';
 import { NewQuestForm } from './new-quest-form';
+import { BackgroundForm } from './background-form';
 
 /**
  * 目標の詳細。
@@ -70,6 +71,31 @@ export default async function GoalPage({ params }: { params: Promise<{ id: strin
 
         <div className="board" style={{ marginTop: 24, gridTemplateColumns: 'minmax(0, 1fr) 340px' }}>
           <div className="stack" style={{ gap: 30 }}>
+            <section className="stack" style={{ gap: 14 }}>
+              <SectionRule
+                label="BACKGROUND"
+                trailing={
+                  <span style={{ fontSize: 11, color: 'var(--text-3)' }}>
+                    AI がクエストを考えるときの前提になります
+                  </span>
+                }
+              />
+              <div className="panel" style={{ padding: '20px 22px' }}>
+                {goal.background === null && (
+                  <p style={{ margin: '0 0 14px', fontSize: 13, color: 'var(--text-3)', lineHeight: 1.9 }}>
+                    今の習熟度、これまでの経緯、時間や道具の制約を書いておくと、
+                    提案の当たりが良くなります。記録からは読み取れない情報だからです。
+                  </p>
+                )}
+                <BackgroundForm
+                  goalId={goal.id}
+                  background={goal.background}
+                  updatedAt={goal.background_updated_at}
+                  updatedBy={goal.background_updated_by}
+                />
+              </div>
+            </section>
+
             <section className="stack" style={{ gap: 14 }}>
               <SectionRule label="PROGRESSION" />
               {phases.length === 0 ? (

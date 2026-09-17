@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache';
 import { requireUser } from '@/lib/auth';
-import { quests as questsDb } from '@/lib/db';
+import { goals as goalsDb, quests as questsDb } from '@/lib/db';
 import { optionalText, requiredText, todayIso, toMessage, type ActionState } from '@/lib/actions';
 import type { Enums } from '@/lib/database.types';
 
@@ -49,4 +49,22 @@ export async function deleteQuestAction(formData: FormData): Promise<void> {
   await questsDb.deleteQuest(db, requiredText(formData, 'questId', 'クエスト'));
   revalidatePath('/today');
   revalidatePath(`/goals/${String(formData.get('goalId'))}`);
+}
+
+/** 現在地を書き換える。空にすると未記入へ戻す。 */
+export async function setBackgroundAction(
+  _previous: ActionState,
+  formData: FormData,
+): Promise<ActionState> {
+  try {
+    const { db } = await requireUser();
+    const goalId = requiredText(formData, 'goalId', '目標');
+
+    await goalsDb.setBackground(db, goalId, optionalText(formData, 'background'));
+
+    revalidatePath(`/goals/${goalId}`);
+    return { status: 'ok' };
+  } catch (error) {
+    return { status: 'error', message: toMessage(error) };
+  }
 }
