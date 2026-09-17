@@ -112,3 +112,32 @@ Site URL はメール本文中のリンクの起点になる。ここが localho
 | Supabase の一時停止 | 無料プロジェクトは 7 日間無操作で停止する。毎日使う前提であれば問題にならない |
 | 送信数の上限 | 組み込みのメール送信には上限がある。ログインを繰り返し試すと一時的に届かなくなる |
 | プレビュー環境 | ブランチごとに URL が変わる。プレビューでもログインしたい場合は、その URL を Redirect URLs へ追加する必要がある |
+
+---
+
+## 6. フレームワークの判定について
+
+Vercel はプロジェクトの作成時にフレームワークを自動判定し、その結果を
+設定として保持する。本リポジトリでは Next.js アプリより先に Vercel
+プロジェクトを作成したため、判定結果が "Other" のまま固定され、
+ビルドは成功するのに成果物が見つからないという失敗が起きた。
+
+```
+Error: No Output Directory named "public" found after the Build completed.
+```
+
+"Other" の場合、Vercel は `public` ディレクトリを成果物として探す。
+Next.js の成果物は `.next` にあるため、見つからない。
+
+リポジトリ直下の `vercel.json` で判定結果を上書きしている。
+
+```json
+{ "framework": "nextjs" }
+```
+
+`vercel.json` の設定はダッシュボードの設定より優先される。プロジェクトを
+作り直しても同じ設定が再現されるため、ダッシュボード側での変更よりも
+こちらを正とする。
+
+ダッシュボードから直す場合は、Settings → Build and Deployment →
+Framework Settings で Framework Preset を Next.js に変更し、再デプロイする。
