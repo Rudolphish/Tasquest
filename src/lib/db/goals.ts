@@ -10,7 +10,7 @@ export const ACTIVE_SLOTS = [1, 2, 3] as const;
 export type ActiveSlot = (typeof ACTIVE_SLOTS)[number];
 
 const GOAL_COLUMNS =
-  'id, user_id, title, why, status, active_slot, share_with_external_ai, started_at, completed_at, created_at';
+  'id, user_id, title, why, status, active_slot, share_with_external_ai, background, background_updated_at, background_updated_by, started_at, completed_at, created_at';
 
 /** 目標を一覧する。アクティブを枠順、それ以外を作成順に並べる。 */
 export async function listGoals(db: Db): Promise<Goal[]> {
@@ -171,4 +171,31 @@ export async function listGoalsByIds(db: Db, ids: readonly string[]): Promise<Go
 
   if (error) throwMapped(error);
   return data ?? [];
+}
+
+/**
+ * 目標の現在地を書き換える。
+ *
+ * 人が画面から書く経路。AI からの書き戻しは record_background RPC を使う。
+ * いずれの経路でも、更新時刻はトリガーが刻む。
+ */
+export async function setBackground(
+  db: Db,
+  goalId: string,
+  background: string | null,
+): Promise<Goal> {
+  const trimmed = background?.trim() ?? '';
+
+  const { data, error } = await db
+    .from('goals')
+    .update({
+      background: trimmed === '' ? null : trimmed,
+      background_updated_by: 'user',
+    })
+    .eq('id', goalId)
+    .select(GOAL_COLUMNS)
+    .single();
+
+  if (error) throwMapped(error);
+  return data;
 }

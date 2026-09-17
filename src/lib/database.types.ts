@@ -119,6 +119,9 @@ export type Database = {
           started_at: string | null;
           completed_at: string | null;
           created_at: string;
+          background: string | null;
+          background_updated_at: string | null;
+          background_updated_by: Database["public"]["Enums"]["content_author"];
         };
         Insert: {
           id?: string;
@@ -131,6 +134,9 @@ export type Database = {
           started_at?: string | null;
           completed_at?: string | null;
           created_at?: string;
+          background?: string | null;
+          background_updated_at?: string | null;
+          background_updated_by?: Database["public"]["Enums"]["content_author"];
         };
         Update: {
           id?: string;
@@ -143,6 +149,9 @@ export type Database = {
           started_at?: string | null;
           completed_at?: string | null;
           created_at?: string;
+          background?: string | null;
+          background_updated_at?: string | null;
+          background_updated_by?: Database["public"]["Enums"]["content_author"];
         };
         Relationships: [
           {
@@ -450,6 +459,7 @@ export type Database = {
     };
     Enums: {
       ai_run_status: "succeeded" | "failed" | "partial";
+      content_author: "user" | "cowork" | "gemini";
       goal_status: "active" | "backlog" | "done" | "abandoned";
       phase_status: "locked" | "active" | "done";
       quest_effort: "S" | "M" | "L";

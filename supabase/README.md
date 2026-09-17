@@ -9,9 +9,11 @@ Tasquest のデータベース定義と、その検証。
 | `migrations/0001_init.sql` | 初期スキーマ。テーブル、RLS、制約、RPC のシグネチャ |
 | `migrations/0002_quests_xp_value_not_null.sql` | `quests.xp_value` に NOT NULL を付与する |
 | `migrations/0003_propose_quests.sql` | 日付の基準と、AI からのクエスト提案を受ける RPC |
+| `migrations/0004_goal_background.sql` | 目標ごとの現在地と、その書き戻しを受ける RPC |
 | `tests/schema.test.mjs` | スキーマの検証。制約が違反を拒否することを確認する |
 | `tests/types.test.mjs` | 型定義がマイグレーションと一致していることの検証 |
 | `tests/rpc.test.mjs` | propose_quests の検証。拒否すべき入力を拒否すること |
+| `tests/background.test.mjs` | 現在地の保存と record_background の検証 |
 | `tests/clock.test.mjs` | 「今日」の定義がアプリと一致していることの検証 |
 | `tests/game.test.mjs` | レベル曲線がアプリと一致していることの検証 |
 | `tests/helpers.mjs` | PGlite 上に Supabase 相当の最小環境を用意する補助 |
